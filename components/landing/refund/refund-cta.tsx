@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function RefundCta() {
   return (
@@ -17,9 +18,11 @@ export function RefundCta() {
           >
             Contact Billing Support
           </Button>
-          <Button size="lg" className="bg-white text-[#0f766e] hover:bg-gray-100">
-            Start Free Trial
-          </Button>
+          <Link href="https://app.pharmy.one/signup" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="bg-white text-[#0f766e] hover:bg-gray-100">
+              Start Free Trial
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

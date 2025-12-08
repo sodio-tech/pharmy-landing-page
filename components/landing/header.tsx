@@ -52,7 +52,7 @@ export function Header() {
           {/* Actions */}
           <div className="flex items-center gap-4">
             <Button variant="ghost" className="text-sm text-[#4b5563] hover:text-[#111827]">
-              <Link href="/login">  Sign In</Link>
+              <Link href="https://app.pharmy.one/login" target="_blank" rel="noopener noreferrer">  Sign In</Link>
 
             </Button>
             <BookDemoButton variant="default" className="bg-[#0f766e] text-white hover:bg-[#0f766e]/90 px-4 py-2 text-sm border-0" />

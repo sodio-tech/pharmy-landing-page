@@ -10,7 +10,9 @@ export function TermsCta() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="#"
+            href="https://app.pharmy.one/signup"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-3 bg-[#0f766e] text-white rounded-lg font-medium hover:bg-[#0d5f58] transition-colors"
           >
             Start Free Trial

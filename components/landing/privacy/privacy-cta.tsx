@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function PrivacyCta() {
   return (
@@ -8,9 +9,11 @@ export function PrivacyCta() {
         <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
           Pharmy is built with privacy and security at its core. We'll always keep your information safe.
         </p>
-        <Button size="lg" className="bg-white text-[#0f766e] hover:bg-white/90 font-semibold">
-          Get Started Securely
-        </Button>
+        <Link href="https://app.pharmy.one/signup" target="_blank" rel="noopener noreferrer">
+          <Button size="lg" className="bg-white text-[#0f766e] hover:bg-white/90 font-semibold">
+            Get Started Securely
+          </Button>
+        </Link>
       </div>
     </section>
   )

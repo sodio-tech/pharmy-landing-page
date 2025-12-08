@@ -2,6 +2,7 @@
 
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const pricingPlans = [
   {
@@ -87,15 +88,17 @@ export function PricingSection() {
                 ))}
               </ul>
 
-              <Button
-                className={`w-full text-sm sm:text-base py-5 sm:py-6 ${
-                  plan.popular
-                    ? "bg-[#0f766e] hover:bg-[#0d6860] text-white"
-                    : "bg-white hover:bg-gray-50 text-gray-900 border border-gray-300"
-                }`}
-              >
-                Start Free Trial
-              </Button>
+              <Link href="https://app.pharmy.one/signup" target="_blank" rel="noopener noreferrer" className="w-full">
+                <Button
+                  className={`w-full text-sm sm:text-base py-5 sm:py-6 ${
+                    plan.popular
+                      ? "bg-[#0f766e] hover:bg-[#0d6860] text-white"
+                      : "bg-white hover:bg-gray-50 text-gray-900 border border-gray-300"
+                  }`}
+                >
+                  Start Free Trial
+                </Button>
+              </Link>
             </div>
           ))}
         </div>

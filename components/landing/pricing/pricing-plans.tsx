@@ -1,5 +1,6 @@
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const pricingPlans = [
   {
@@ -92,14 +93,16 @@ export function PricingSection() {
                   {plan.period && <span className="text-[#4b5563] text-base sm:text-lg">{plan.period}</span>}
                 </div>
 
-                <Button
-                  variant={plan.buttonVariant}
-                  className={`w-full text-sm sm:text-base py-5 sm:py-6 ${
-                    plan.buttonColor || "border-[#0f766e] text-[#0f766e] hover:bg-[#0f766e]/5"
-                  }`}
-                >
-                  {plan.buttonText}
-                </Button>
+                <Link href="https://app.pharmy.one/signup" target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button
+                    variant={plan.buttonVariant}
+                    className={`w-full text-sm sm:text-base py-5 sm:py-6 ${
+                      plan.buttonColor || "border-[#0f766e] text-[#0f766e] hover:bg-[#0f766e]/5"
+                    }`}
+                  >
+                    {plan.buttonText}
+                  </Button>
+                </Link>
               </div>
 
               <ul className="space-y-3 sm:space-y-4">
