@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Pharmy - Pharmacy Management Software",
+        alt: "Pharmy – Pharmacy Management Software for Billing & Inventory",
       },
     ],
     locale: "en_US",
