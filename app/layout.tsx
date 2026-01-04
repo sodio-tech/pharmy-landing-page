@@ -52,7 +52,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Google tag (gtag.js) */}
+        {/* Google tag */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-851334617"
           strategy="afterInteractive"
