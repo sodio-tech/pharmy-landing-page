@@ -8,6 +8,12 @@ import { OfficeInfo } from '@/components/landing/contactus/office-info'
 import { ContactForm } from '@/components/landing/contactus/contact-form'
 import { SocialMedia } from '@/components/landing/contactus/social-media'
 import { Footer } from '@/components/landing/footer'
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Contact Pharmy – Get Support or Book a Demo",
+  description: "Have questions? Contact Pharmy for support, onboarding help, or a demo. We're here to help you set up and run your pharmacy smoothly.",
+}
 
 const page = () => {
     return (

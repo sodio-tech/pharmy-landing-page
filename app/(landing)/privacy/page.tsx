@@ -8,6 +8,13 @@ import DataSecurity from "@/components/landing/privacy/data-security"
 import UserRights from "@/components/landing/privacy/user-rights"
 import PrivacyContact from "@/components/landing/privacy/privacy-contact"
 import { PrivacyCta } from "@/components/landing/privacy/privacy-cta"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Pharmy Privacy Policy – How We Protect Your Data",
+  description: "Read Pharmy's privacy policy to understand how we collect, use, and safeguard your personal and business information securely.",
+}
+
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-white">

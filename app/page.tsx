@@ -8,6 +8,12 @@ import { Testimonials } from "@/components/landing/main/testimonials"
 import { PricingSection } from "@/components/landing/main/pricing-section"
 import { FAQSection } from "@/components/landing/main/faq-section"
 import { FinalCTA } from "@/components/landing/main/final-cta"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Pharmy – Pharmacy Management Software for Billing & Inventory",
+  description: "Pharmy helps pharmacies manage billing, inventory, staff, and reports. Start your free 3-day trial and simplify daily pharmacy operations.",
+}
 
 export default function HomePage() {
   return (

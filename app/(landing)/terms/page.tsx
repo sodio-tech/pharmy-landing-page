@@ -16,6 +16,12 @@ import { TermsGoverningLaw } from "@/components/landing/terms/terms-governing-la
 import { TermsChanges } from "@/components/landing/terms/terms-changes"
 import { TermsContact } from "@/components/landing/terms/terms-contact"
 import { TermsCta } from "@/components/landing/terms/terms-cta"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Pharmy Terms & Conditions – Usage & Service Guidelines",
+  description: "Review Pharmy's terms and conditions for platform use, subscription rules, user responsibilities, and service policies.",
+}
 
 export default function TermsPage() {
   return (

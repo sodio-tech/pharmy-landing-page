@@ -10,6 +10,12 @@ import { AiIntelligence } from "@/components/landing/features/ai-intelligence"
 import { CompleteFeatureSuite } from "@/components/landing/features/complete-feature-suite"
 import { WhyChoosePharmy } from "@/components/landing/features/why-choose-pharmy"
 import { FeaturesCta } from "@/components/landing/features/features-cta"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Pharmy Features – Billing, Inventory, Reports & Staff Control",
+  description: "Explore Pharmy features: billing, inventory control, sales reports, staff roles, and multi-branch management. Built for modern pharmacies.",
+}
 
 export default function FeaturesPage() {
     return (

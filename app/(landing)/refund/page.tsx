@@ -9,6 +9,12 @@ import { RenewalPlanChanges } from "@/components/landing/refund/renewal-plan-cha
 import { NonRefundableItems } from "@/components/landing/refund/non-refundable-items"
 import { BillingSupport } from "@/components/landing/refund/billing-support"
 import { RefundCta } from "@/components/landing/refund/refund-cta"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Pharmy Refund Policy – Subscription Refund & Cancellation Rules",
+  description: "Understand Pharmy's refund policy including eligibility, cancellations, subscription refunds, and how to request support for billing issues.",
+}
 
 export default function RefundPolicyPage() {
   return (
