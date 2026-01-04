@@ -16,10 +16,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pharmy – Pharmacy Management Software for Billing & Inventory",
+  title: "Pharmy - Pharmacy Management Software for Billing & Inventory",
   description: "Pharmy helps pharmacies manage billing, inventory, staff, and reports. Start your free 3-day trial and simplify daily pharmacy operations.",
   openGraph: {
-    title: "Pharmy – Pharmacy Management Software for Billing & Inventory",
+    title: "Pharmy - Pharmacy Management Software for Billing & Inventory",
     description: "Pharmy helps pharmacies manage billing, inventory, staff, and reports. Start your free 3-day trial and simplify daily pharmacy operations.",
     url: "https://www.pharmy.one",
     siteName: "Pharmy",
