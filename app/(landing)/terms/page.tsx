@@ -21,6 +21,28 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Pharmy Terms & Conditions – Usage & Service Guidelines",
   description: "Review Pharmy's terms and conditions for platform use, subscription rules, user responsibilities, and service policies.",
+  openGraph: {
+    title: "Pharmy Terms & Conditions – Usage & Service Guidelines",
+    description: "Review Pharmy's terms and conditions for platform use, subscription rules, user responsibilities, and service policies.",
+    url: "https://www.pharmy.one/terms",
+    siteName: "Pharmy",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Pharmy Terms & Conditions",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pharmy Terms & Conditions – Usage & Service Guidelines",
+    description: "Review Pharmy's terms and conditions for platform use, subscription rules, user responsibilities, and service policies.",
+    images: ["/logo.png"],
+  },
 }
 
 export default function TermsPage() {

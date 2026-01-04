@@ -13,6 +13,28 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Contact Pharmy – Get Support or Book a Demo",
   description: "Have questions? Contact Pharmy for support, onboarding help, or a demo. We're here to help you set up and run your pharmacy smoothly.",
+  openGraph: {
+    title: "Contact Pharmy – Get Support or Book a Demo",
+    description: "Have questions? Contact Pharmy for support, onboarding help, or a demo. We're here to help you set up and run your pharmacy smoothly.",
+    url: "https://www.pharmy.one/contact",
+    siteName: "Pharmy",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact Pharmy",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Pharmy – Get Support or Book a Demo",
+    description: "Have questions? Contact Pharmy for support, onboarding help, or a demo. We're here to help you set up and run your pharmacy smoothly.",
+    images: ["/logo.png"],
+  },
 }
 
 const page = () => {

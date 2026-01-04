@@ -15,6 +15,28 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Pharmy Features – Billing, Inventory, Reports & Staff Control",
   description: "Explore Pharmy features: billing, inventory control, sales reports, staff roles, and multi-branch management. Built for modern pharmacies.",
+  openGraph: {
+    title: "Pharmy Features – Billing, Inventory, Reports & Staff Control",
+    description: "Explore Pharmy features: billing, inventory control, sales reports, staff roles, and multi-branch management. Built for modern pharmacies.",
+    url: "https://www.pharmy.one/features",
+    siteName: "Pharmy",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Pharmy Features",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pharmy Features – Billing, Inventory, Reports & Staff Control",
+    description: "Explore Pharmy features: billing, inventory control, sales reports, staff roles, and multi-branch management. Built for modern pharmacies.",
+    images: ["/logo.png"],
+  },
 }
 
 export default function FeaturesPage() {

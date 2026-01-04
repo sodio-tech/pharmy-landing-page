@@ -16,8 +16,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pharmy - Pharmacy Management System",
-  description: "Pharmy is a pharmacy management system that helps you manage your pharmacy operations easily and efficiently.",
+  title: "Pharmy – Pharmacy Management Software for Billing & Inventory",
+  description: "Pharmy helps pharmacies manage billing, inventory, staff, and reports. Start your free 3-day trial and simplify daily pharmacy operations.",
+  openGraph: {
+    title: "Pharmy – Pharmacy Management Software for Billing & Inventory",
+    description: "Pharmy helps pharmacies manage billing, inventory, staff, and reports. Start your free 3-day trial and simplify daily pharmacy operations.",
+    url: "https://www.pharmy.one",
+    siteName: "Pharmy",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Pharmy - Pharmacy Management Software",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pharmy – Pharmacy Management Software for Billing & Inventory",
+    description: "Pharmy helps pharmacies manage billing, inventory, staff, and reports. Start your free 3-day trial and simplify daily pharmacy operations.",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({
