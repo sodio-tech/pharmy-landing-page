@@ -1,8 +1,8 @@
 import { Header } from "@/components/landing/header"
 import { Footer } from "@/components/landing/footer"
 import { LandingHero } from "@/components/landing/main/landing-hero"
-import { FeaturesGrid } from "@/components/landing/main/features-grid"
-import { ChallengeSolution } from "@/components/landing/main/challenge-solution"
+import { FeaturesSection } from "@/components/landing/main/features-grid"
+import { ComparisonSection } from "@/components/landing/main/challenge-solution"
 import { AIFeatures } from "@/components/landing/main/ai-features"
 import { Testimonials } from "@/components/landing/main/testimonials"
 import { PricingSection } from "@/components/landing/main/pricing-section"
@@ -48,8 +48,8 @@ export default function HomePage() {
         <main className="flex-1">
           <LandingHero />
           <LandingBox />
-          <FeaturesGrid />
-          <ChallengeSolution />
+          <FeaturesSection />
+          <ComparisonSection />
           <AIFeatures />
           <Testimonials />
           <PricingSection />

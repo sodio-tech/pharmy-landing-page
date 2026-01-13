@@ -2,7 +2,7 @@ import { GetStartedFreeButton } from "../get-started-free-button"
 
 export function FinalCTA() {
   return (
-    <section className="py-20 px-4 bg-[#0f766e] text-white">
+    <section className="py-20 px-4 bg-linear-to-r from-[#0f766e] to-[#F59E0B] text-white">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">Take your pharmacy to the next level with Pharmy</h2>
         <p className="text-xl text-white/90 mb-8 leading-relaxed">
