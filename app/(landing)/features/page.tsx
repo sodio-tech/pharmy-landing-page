@@ -1,4 +1,3 @@
-import { Header } from "@/components/landing/header"
 import { Footer } from "@/components/landing/footer"
 import { FeaturesHero } from "@/components/landing/features/features-hero"
 import { FeaturesIntro } from "@/components/landing/features/features-intro"
@@ -11,6 +10,7 @@ import { CompleteFeatureSuite } from "@/components/landing/features/complete-fea
 import { WhyChoosePharmy } from "@/components/landing/features/why-choose-pharmy"
 import { FeaturesCta } from "@/components/landing/features/features-cta"
 import type { Metadata } from "next"
+import FixedHeader from "@/components/landing/FixedHeader"
 
 export const metadata: Metadata = {
   title: "Pharmy Features – Billing, Inventory, Reports & Staff Control",
@@ -41,8 +41,9 @@ export const metadata: Metadata = {
 
 export default function FeaturesPage() {
     return (
+      <>  
+      <FixedHeader />
         <div className="min-h-screen bg-[#ffffff]">
-            <Header />
             <main>
                 <FeaturesHero />
                 <FeaturesIntro />
@@ -57,5 +58,6 @@ export default function FeaturesPage() {
             </main>
             <Footer />
         </div>
+        </>
     )
 }

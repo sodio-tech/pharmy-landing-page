@@ -16,7 +16,7 @@ export function LandingHero() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl">
             Smarter, Simpler
             <br />
-           <span className="text-[#ffffff]/80">Pharmacy Management</span>
+            <span className="text-[#ffffff]/80">Pharmacy Management</span>
           </h1>
 
           <p className="text-lg text-[#F0FDFA] mb-8 leading-relaxed max-w-2xl">
@@ -26,22 +26,10 @@ export function LandingHero() {
 
           <div className="flex flex-wrap gap-4 justify-center mb-16">
             <GetStartedFreeButton className="rounded-full bg-white font-semibold text-[#0F766E] hover:bg-white/90 transition-all duration-300" />
-            <BookDemoButton className="rounded-full text-white font-semibold border-white/30 border-2 hover:bg-transparent/90 hover:text-white/85 hover:border-white/30 transition-all duration-300"/>
+            <BookDemoButton className="rounded-full text-white font-semibold border-white/30 border-2 hover:bg-transparent/90 hover:text-white/85 hover:border-white/30 transition-all duration-300" />
           </div>
 
-          {/* <div className="w-[calc(100vw-32px)] md:w-[1200px]">
-            <div className="bg-primary-light/50 w-full h-full rounded-2xl p-2 shadow-2xl">
-              <Image
-                src="/assets/landing-dashboard.jpg"
-                alt="Dashboard preview"
-                width={1160}
-                height={700}
-                className="w-full h-full object-coverrounded-xl shadow-lg"
-              />
-            </div>
-          </div> */}
-
-<div className="w-full lg:max-w-[1400px]">
+          <div className="w-full lg:max-w-[1400px]">
             <PharmacyDashboardPreview />
           </div>
         </div>

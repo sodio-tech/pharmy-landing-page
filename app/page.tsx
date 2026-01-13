@@ -10,6 +10,7 @@ import { FAQSection } from "@/components/landing/main/faq-section"
 import { FinalCTA } from "@/components/landing/main/final-cta"
 import type { Metadata } from "next"
 import LandingBox from "@/components/landing/main/landing-box"
+import FixedHeader from "@/components/landing/FixedHeader"
 
 export const metadata: Metadata = {
   title: "Pharmy – Pharmacy Management Software for Billing & Inventory",
@@ -41,9 +42,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <div className="fixed top-0 left-0 w-full z-10 ">
-        <Header />
-      </div>
+      <FixedHeader />
       <div className="min-h-screen flex flex-col">
         <main className="flex-1">
           <LandingHero />
