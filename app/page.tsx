@@ -9,6 +9,7 @@ import { PricingSection } from "@/components/landing/main/pricing-section"
 import { FAQSection } from "@/components/landing/main/faq-section"
 import { FinalCTA } from "@/components/landing/main/final-cta"
 import type { Metadata } from "next"
+import LandingBox from "@/components/landing/main/landing-box"
 
 export const metadata: Metadata = {
   title: "Pharmy – Pharmacy Management Software for Billing & Inventory",
@@ -39,19 +40,25 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        <LandingHero />
-        <FeaturesGrid />
-        <ChallengeSolution />
-        <AIFeatures />
-        <Testimonials />
-        <PricingSection />
-        <FAQSection />
-        <FinalCTA />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <div className="fixed top-0 left-0 w-full z-10 ">
+        <Header />
+      </div>
+      <div className="min-h-screen flex flex-col">
+        <main className="flex-1">
+          <LandingHero />
+          <LandingBox />
+          <FeaturesGrid />
+          <ChallengeSolution />
+          <AIFeatures />
+          <Testimonials />
+          <PricingSection />
+          <FAQSection />
+          <FinalCTA />
+        </main>
+        <Footer />
+      </div>
+    </>
+
   )
 }

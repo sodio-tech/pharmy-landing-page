@@ -150,7 +150,7 @@ export function BookDemoModal({ children }: BookDemoModalProps) {
             Fill in your details and we'll get back to you shortly.
           </DialogDescription>
         </DialogHeader>
-        <div className="space-y-4 pt-4">
+        <div className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="name" className="text-sm font-medium text-gray-900">
               Name
