@@ -8,11 +8,11 @@ export default function PharmacyTrustSection() {
           TRUSTED BY 2,000+ PHARMACIES
         </p>
 
-        <div className="flex flex-wrap justify-center items-center gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 sm:flex flex-wrap justify-center items-center gap-6 lg:gap-8">
           {/* MedKart */}
           <div className="flex items-center gap-3 bg-gray-50 px-6 py-3.5 rounded-xl shadow-sm">
-            <div className="w-11 h-11 bg-teal-300 rounded-xl flex items-center justify-center">
-              <ShoppingCart className="w-6 h-6 text-teal-800" strokeWidth={2} />
+            <div className="sm:w-11 sm:h-11 w-8 h-8 bg-teal-300 rounded-xl flex items-center justify-center">
+              <ShoppingCart className="sm:w-6 sm:h-6 w-4 h-4 text-teal-800" strokeWidth={2} />
             </div>
             <div>
               <p className="text-gray-900 text-base font-semibold">MedKart</p>
@@ -22,8 +22,8 @@ export default function PharmacyTrustSection() {
 
           {/* Arogya */}
           <div className="flex items-center gap-3 bg-gray-50 px-6 py-3.5 rounded-xl shadow-sm">
-            <div className="w-11 h-11 bg-green-400 rounded-xl flex items-center justify-center">
-              <Heart className="w-6 h-6 text-green-800" strokeWidth={2} fill="currentColor" />
+            <div className="sm:w-11 sm:h-11 w-8 h-8 bg-green-400 rounded-xl flex items-center justify-center">
+              <Heart className="sm:w-6 sm:h-6 w-4 h-4 text-green-800" strokeWidth={2} fill="currentColor" />
             </div>
             <div>
               <p className="text-gray-900 text-base font-semibold">Arogya</p>
@@ -33,8 +33,8 @@ export default function PharmacyTrustSection() {
 
           {/* Swasth */}
           <div className="flex items-center gap-3 bg-gray-50 px-6 py-3.5 rounded-xl shadow-sm">
-            <div className="w-11 h-11 bg-indigo-500 rounded-xl flex items-center justify-center">
-              <Building2 className="w-6 h-6 text-white" strokeWidth={2} />
+            <div className="sm:w-11 sm:h-11 w-8 h-8 bg-indigo-500 rounded-xl flex items-center justify-center">
+              <Building2 className="sm:w-6 sm:h-6 w-4 h-4 text-white" strokeWidth={2} />
             </div>
             <div>
               <p className="text-gray-900 text-base font-semibold">Swasth</p>
@@ -44,8 +44,8 @@ export default function PharmacyTrustSection() {
 
           {/* CarePlus */}
           <div className="flex items-center gap-3 bg-gray-50 px-6 py-3.5 rounded-xl shadow-sm">
-            <div className="w-11 h-11 bg-purple-500 rounded-xl flex items-center justify-center">
-              <Hand className="w-6 h-6 text-white" strokeWidth={2} />
+            <div className="sm:w-11 sm:h-11 w-8 h-8 bg-purple-500 rounded-xl flex items-center justify-center">
+              <Hand className="sm:w-6 sm:h-6 w-4 h-4 text-white" strokeWidth={2} />
             </div>
             <div>
               <p className="text-gray-900 text-base font-semibold">CarePlus</p>
@@ -54,9 +54,9 @@ export default function PharmacyTrustSection() {
           </div>
 
           {/* Jeevan */}
-          <div className="flex items-center gap-3 bg-gray-50 px-6 py-3.5 rounded-xl shadow-sm">
-            <div className="w-11 h-11 bg-red-500 rounded-xl flex items-center justify-center">
-              <Pill className="w-6 h-6 text-white" strokeWidth={2} />
+          <div className="sm:col-span-1 col-span-2 flex items-center gap-3 bg-gray-50 px-6 py-3.5 rounded-xl shadow-sm">
+            <div className="sm:w-11 sm:h-11 w-8 h-8 bg-red-500 rounded-xl flex items-center justify-center">
+              <Pill className="sm:w-6 sm:h-6 w-4 h-4 text-white" strokeWidth={2} />
             </div>
             <div>
               <p className="text-gray-900 text-base font-semibold">Jeevan</p>
