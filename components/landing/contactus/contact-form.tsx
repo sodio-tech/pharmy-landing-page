@@ -78,11 +78,11 @@ export function ContactForm() {
     <section className="py-12 md:py-16 bg-[#f9fafb]">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">Send Us a Message</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">Send Us a <span className="text-[#0F766E]">Message</span></h2>
           <p className="text-base text-[#4b5563]">Fill out the form below and we'll get back to you within 24 hours.</p>
         </div>
 
-        <Card className="max-w-2xl mx-auto p-6 md:p-8 border-[#e5e7eb]">
+        <Card className="max-w-2xl mx-auto p-6 md:p-8 shadow-xl">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
@@ -156,7 +156,7 @@ export function ContactForm() {
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 required
                 rows={6}
-                className="border-[#e5e7eb] resize-none"
+                className="border-[#e5e7eb] resize-none h-[200px]"
               />
             </div>
 
