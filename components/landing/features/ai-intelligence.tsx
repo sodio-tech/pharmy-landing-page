@@ -1,84 +1,70 @@
+import { Camera, ListChecks, ShieldAlert, Mic } from "lucide-react"
+
 export function AiIntelligence() {
   const features = [
     {
-      icon: (
-        <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-          />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-      ),
+      icon: Camera,
+      iconBg: "bg-white",
+      iconColor: "text-[#0f766e]",
       title: "OCR Prescription Scanning",
-      description: "Instantly digitize prescriptions with 99% accuracy using advanced AI technology",
+      description:
+        "Instantly digitize prescriptions with 99% accuracy using advanced optical character recognition technology.",
     },
     {
-      icon: (
-        <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
-          />
-        </svg>
-      ),
-      title: "Predictive Forecasting",
-      description: "Smart inventory predictions based on historical data and market trends",
+      icon: ListChecks,
+      iconBg: "bg-[#5b7cfa]",
+      iconColor: "text-white",
+      title: "Predictive Stock Forecasting",
+      description: "AI-powered inventory predictions based on historical data, seasonal trends, and market analysis.",
     },
     {
-      icon: (
-        <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-          />
-        </svg>
-      ),
+      icon: ShieldAlert,
+      iconBg: "bg-[#a855f7]",
+      iconColor: "text-white",
       title: "Fraud Detection",
-      description: "Identify suspicious prescriptions and unusual orders automatically",
+      description:
+        "Intelligent detection of suspicious prescriptions and unusual ordering patterns to protect your pharmacy.",
     },
     {
-      icon: (
-        <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
-          />
-        </svg>
-      ),
+      icon: Mic,
+      iconBg: "bg-[#22c55e]",
+      iconColor: "text-white",
       title: "Voice Search",
-      description: "Find medicines quickly with voice commands and natural language processing",
+      description: "Find medicines quickly with natural language voice commands and intelligent search algorithms.",
     },
   ]
 
   return (
-    <section className="py-20 px-6 bg-[#0f766e]">
+    <section className="py-20 px-6 bg-linear-to-br from-[#0f766e] to-[#0d8f7f]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">AI-Powered Intelligence</h2>
-          <p className="text-white/90 text-lg max-w-2xl mx-auto">
-            Advanced automation that revolutionizes pharmacy operations
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" />
+            </svg>
+            <span className="text-white text-sm font-medium">AI-Powered Intelligence</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Advanced AI Features</h2>
+          <p className="text-white/90 text-lg max-w-3xl mx-auto leading-relaxed">
+            Leverage cutting-edge artificial intelligence to automate complex tasks and gain intelligent insights.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-[#0d6559] rounded-lg p-6 text-center">
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[#0a5449] mb-4">
-                {feature.icon}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => {
+            const IconComponent = feature.icon
+            return (
+              <div key={index} className="text-center">
+                <div
+                  className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl ${feature.iconBg} mb-6 shadow-lg`}
+                >
+                  <IconComponent className={`w-10 h-10 ${feature.iconColor}`} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-white/80 text-sm leading-relaxed">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-white/80 text-sm">{feature.description}</p>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>
