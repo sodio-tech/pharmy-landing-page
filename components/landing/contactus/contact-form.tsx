@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
+import { motion } from "framer-motion"
 import axios from "axios"
 import { toast } from "react-toastify"
 import { Card } from "@/components/ui/card"
@@ -77,12 +78,24 @@ export function ContactForm() {
   return (
     <section className="py-12 md:py-16 bg-[#f9fafb]">
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center mb-8">
+        <motion.div
+          className="max-w-2xl mx-auto text-center mb-8"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">Send Us a <span className="text-[#0F766E]">Message</span></h2>
           <p className="text-base text-[#4b5563]">Fill out the form below and we'll get back to you within 24 hours.</p>
-        </div>
+        </motion.div>
 
-        <Card className="max-w-2xl mx-auto p-6 md:p-8 shadow-xl">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <Card className="max-w-2xl mx-auto p-6 md:p-8 shadow-xl">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
@@ -160,15 +173,21 @@ export function ContactForm() {
               />
             </div>
 
-            <Button
-              type="submit"
-              disabled={isLoading}
-              className="w-full bg-[#0f766e] text-white hover:bg-[#0f766e]/90 h-12 text-base font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
-              {isLoading ? "Sending..." : "Send Message"}
-            </Button>
+              <Button
+                type="submit"
+                disabled={isLoading}
+                className="w-full bg-[#0f766e] text-white hover:bg-[#0f766e]/90 h-12 text-base font-medium cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isLoading ? "Sending..." : "Send Message"}
+              </Button>
+            </motion.div>
           </form>
         </Card>
+        </motion.div>
       </div>
     </section>
   )
