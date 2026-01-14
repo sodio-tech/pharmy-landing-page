@@ -1,3 +1,7 @@
+"use client"
+
+import { motion } from "framer-motion"
+
 const faqs = [
   {
     question: "Can Pharmy work offline?",
@@ -20,20 +24,61 @@ const faqs = [
   },
 ]
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+}
+
 export function FAQSection() {
   return (
     <section id="faq" className="py-20 px-4 bg-gray-50">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Frequently Asked Questions</h2>
+        <motion.h2
+          className="text-4xl font-bold text-center text-gray-900 mb-16"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
+          Frequently Asked Questions
+        </motion.h2>
 
-        <div className="space-y-8">
+        <motion.div
+          className="space-y-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {faqs.map((faq) => (
-            <div key={faq.question} className="bg-white rounded-xl p-8 shadow-sm">
+            <motion.div
+              key={faq.question}
+              variants={itemVariants}
+              whileHover={{ scale: 1.02, x: 5 }}
+              className="bg-white rounded-xl p-8 shadow-sm"
+            >
               <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
               <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

@@ -1,5 +1,6 @@
+"use client"
 
-
+import { motion } from "framer-motion"
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -46,20 +47,56 @@ const pricingPlans = [
   },
 ]
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+}
+
 export function PricingSection() {
   return (
     <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
-      <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+        >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
           <p className="text-gray-600 text-lg">Choose the plan that fits your pharmacy</p>
-        </div>
+        </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+        <motion.div
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {pricingPlans.map((plan) => (
-            <div
+            <motion.div
               key={plan.name}
-              className={`relative rounded-2xl p-6 sm:p-8 transition-all hover:scale-105 ${
+              variants={itemVariants}
+              whileHover={{ scale: 1.05, y: -5 }}
+              className={`relative rounded-2xl p-6 sm:p-8 transition-all ${
                 plan.popular ? "border-2 border-[#0f766e] shadow-xl" : "border border-gray-200 shadow-sm"
               }`}
             >
@@ -99,9 +136,9 @@ export function PricingSection() {
                   Start Free Trial
                 </Button>
               </Link>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

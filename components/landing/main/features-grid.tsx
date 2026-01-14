@@ -1,3 +1,6 @@
+"use client"
+
+import { motion } from "framer-motion"
 import { Package, FileText, Pill, BarChart3, Shield, Building2, Check, ArrowRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
@@ -67,6 +70,28 @@ const features = [
   },
 ]
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+}
+
 export function FeaturesSection() {
   return (
     <section
@@ -77,11 +102,23 @@ export function FeaturesSection() {
     >
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#bfdbfe]/40 text-[#2563eb] px-4 py-2 rounded-full text-sm font-medium mb-6">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+        >
+          <motion.div
+            className="inline-flex items-center gap-2 bg-[#bfdbfe]/40 text-[#2563eb] px-4 py-2 rounded-full text-sm font-medium mb-6"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <span className="w-2 h-2 bg-[#2563eb] rounded-full"></span>
             CORE FEATURES
-          </div>
+          </motion.div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#111827] mb-6 text-balance">
             Built for <span className="text-[#0f766e]">Efficiency</span>, Designed for{" "}
             <span className="text-[#0f766e]">Care</span>
@@ -90,10 +127,16 @@ export function FeaturesSection() {
             Everything you need to run a modern pharmacy, from inventory to compliance, wrapped in a beautiful
             interface.
           </p>
-        </div>
+        </motion.div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {features.map((feature, index) => {
             const isLarge = feature.large
             const textColor = "text-[#111827]"
@@ -103,8 +146,10 @@ export function FeaturesSection() {
             const checkColor = "text-[#0f766e]"
 
             return (
-              <div
+              <motion.div
                 key={index}
+                variants={itemVariants}
+                whileHover={{ scale: 1.03, y: -5 }}
                 className={`${feature.bgColor} rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 ${
                   isLarge ? "md:row-span-2 lg:row-span-1" : ""
                 } flex flex-col`}
@@ -152,19 +197,28 @@ export function FeaturesSection() {
                   Learn more
                   <ArrowRight className="w-4 h-4" />
                 </button>
-              </div>
+              </motion.div>
             )
           })}
-        </div>
+        </motion.div>
 
         {/* Trust Badge */}
-        <div className="flex justify-center">
-          <div className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-md">
+        <motion.div
+          className="flex justify-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <motion.div
+            className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-md"
+            whileHover={{ scale: 1.05 }}
+          >
             <span className="text-2xl">⭐</span>
             <span className="text-[#111827] font-medium">Trusted by 2,000+ pharmacies worldwide</span>
             <span className="text-2xl">⭐</span>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   )
