@@ -1,5 +1,3 @@
-import FixedHeader from "@/components/landing/FixedHeader"
-import { Footer } from "@/components/landing/footer"
 import { AboutHero } from "@/components/landing/aboutus/about-hero"
 import { OurStory } from "@/components/landing/aboutus/our-story"
 import { MissionVision } from "@/components/landing/aboutus/mission-vision"
@@ -39,19 +37,13 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <FixedHeader />
-      <div className="min-h-screen bg-[#ffffff]">
-        <main>
-          <AboutHero />
-          <OurStory />
-          <MissionVision />
-          <WhatWeDo />
-          <WhyChoose />
-          <AboutTestimonials />
-          <AboutCta />
-        </main>
-        <Footer />
-      </div>
+      <AboutHero />
+      <OurStory />
+      <MissionVision />
+      <WhatWeDo />
+      <WhyChoose />
+      <AboutTestimonials />
+      <AboutCta />
     </>
   )
 }

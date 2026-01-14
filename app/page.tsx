@@ -1,5 +1,3 @@
-import { Header } from "@/components/landing/header"
-import { Footer } from "@/components/landing/footer"
 import { LandingHero } from "@/components/landing/main/landing-hero"
 import { FeaturesSection } from "@/components/landing/main/features-grid"
 import { ComparisonSection } from "@/components/landing/main/challenge-solution"
@@ -10,7 +8,7 @@ import { FAQSection } from "@/components/landing/main/faq-section"
 import { FinalCTA } from "@/components/landing/main/final-cta"
 import type { Metadata } from "next"
 import LandingBox from "@/components/landing/main/landing-box"
-import FixedHeader from "@/components/landing/FixedHeader"
+import LandingLayout from "./(landing)/layout"
 
 export const metadata: Metadata = {
   title: "Pharmy – Pharmacy Management Software for Billing & Inventory",
@@ -42,21 +40,17 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <FixedHeader />
-      <div className="min-h-screen flex flex-col">
-        <main className="flex-1">
-          <LandingHero />
-          <LandingBox />
-          <FeaturesSection />
-          <ComparisonSection />
-          <AIFeatures />
-          <Testimonials />
-          <PricingSection />
-          <FAQSection />
-          <FinalCTA />
-        </main>
-        <Footer />
-      </div>
+      <LandingLayout>
+        <LandingHero />
+        <LandingBox />
+        <FeaturesSection />
+        <ComparisonSection />
+        <AIFeatures />
+        <Testimonials />
+        <PricingSection />
+        <FAQSection />
+        <FinalCTA />
+      </LandingLayout>
     </>
 
   )

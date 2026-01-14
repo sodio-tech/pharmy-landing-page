@@ -1,15 +1,11 @@
 // import { FaqCta } from '@/components/landing/contactus/faq-cta'
 import { DemoCta } from '@/components/landing/contactus/demo-cta'
 import { ContactCards } from '@/components/landing/contactus/contact-cards'
-import React from 'react'
-import { Header } from '@/components/landing/header'
 import { HeroSection } from '@/components/landing/contactus/hero-section'
 import { OfficeInfo } from '@/components/landing/contactus/office-info'
 import { ContactForm } from '@/components/landing/contactus/contact-form'
 import { SocialMedia } from '@/components/landing/contactus/social-media'
-import { Footer } from '@/components/landing/footer'
 import type { Metadata } from "next"
-import FixedHeader from '@/components/landing/FixedHeader'
 
 export const metadata: Metadata = {
   title: "Contact Pharmy – Get Support or Book a Demo",
@@ -41,19 +37,13 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-      <FixedHeader />
-      <div className="min-h-screen flex flex-col">
-        <main className="flex-1">
-          <HeroSection />
-          <ContactCards />
-          <ContactForm />
-          <OfficeInfo />
-          <SocialMedia />
-          {/* <FaqCta /> */}
-          <DemoCta />
-        </main>
-        <Footer />
-      </div>
+      <HeroSection />
+      <ContactCards />
+      <ContactForm />
+      <OfficeInfo />
+      <SocialMedia />
+      {/* <FaqCta /> */}
+      <DemoCta />
     </>
   )
 }

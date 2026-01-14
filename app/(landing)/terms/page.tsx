@@ -1,5 +1,3 @@
-import { Header } from "@/components/landing/header"
-import { Footer } from "@/components/landing/footer"
 import { TermsHero } from "@/components/landing/terms/terms-hero"
 import { TermsIntroduction } from "@/components/landing/terms/terms-introduction"
 import { TermsEligibility } from "@/components/landing/terms/terms-eligibility"
@@ -47,29 +45,25 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        <TermsHero />
-        <div className="max-w-4xl mx-auto px-6 py-16 space-y-12">
-          <TermsIntroduction />
-          <TermsEligibility />
-          <TermsServices />
-          <TermsResponsibilities />
-          <TermsPayment />
-          <TermsDataPrivacy />
-          <TermsIntellectualProperty />
-          <TermsThirdParty />
-          <TermsLiability />
-          <TermsAvailability />
-          <TermsTermination />
-          <TermsGoverningLaw />
-          <TermsChanges />
-          <TermsContact />
-        </div>
-      </main>
+    <>
+      <TermsHero />
+      <div className="max-w-4xl mx-auto px-6 py-16 space-y-12">
+        <TermsIntroduction />
+        <TermsEligibility />
+        <TermsServices />
+        <TermsResponsibilities />
+        <TermsPayment />
+        <TermsDataPrivacy />
+        <TermsIntellectualProperty />
+        <TermsThirdParty />
+        <TermsLiability />
+        <TermsAvailability />
+        <TermsTermination />
+        <TermsGoverningLaw />
+        <TermsChanges />
+        <TermsContact />
+      </div>
       <TermsCta />
-      <Footer />
-    </div>
+    </>
   )
 }

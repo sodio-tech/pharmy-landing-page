@@ -1,5 +1,3 @@
-import { Header } from "@/components/landing/header"
-import { Footer } from "@/components/landing/footer"
 import PrivacyHero from "@/components/landing/privacy/privacy-hero"
 import InformationCollect from "@/components/landing/privacy/information-collect"
 import InformationUse from "@/components/landing/privacy/information-use"
@@ -39,19 +37,15 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        <PrivacyHero />
-        <InformationCollect />
-        <InformationUse />
-        <DataSharing />
-        <DataSecurity />
-        <UserRights />
-        <PrivacyContact />
-        <PrivacyCta />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <PrivacyHero />
+      <InformationCollect />
+      <InformationUse />
+      <DataSharing />
+      <DataSecurity />
+      <UserRights />
+      <PrivacyContact />
+      <PrivacyCta />
+    </>
   )
 }

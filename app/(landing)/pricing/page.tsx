@@ -1,5 +1,3 @@
-import { Header } from "@/components/landing/header"
-import { Footer } from "@/components/landing/footer"
 import { PricingHero } from "@/components/landing/pricing/pricing-hero"
 import { PricingSection } from "@/components/landing/pricing/pricing-plans"
 import { PricingComparison } from "@/components/landing/pricing/pricing-comparison"
@@ -7,7 +5,6 @@ import { PricingTestimonial } from "@/components/landing/pricing/pricing-testimo
 import { PricingFaq } from "@/components/landing/pricing/pricing-faq"
 import { PricingCta } from "@/components/landing/pricing/pricing-cta"
 import type { Metadata } from "next"
-import FixedHeader from "@/components/landing/FixedHeader"
 
 export const metadata: Metadata = {
   title: "Pharmy Pricing – Pro Plan & Multi-Branch Add-On",
@@ -39,18 +36,12 @@ export const metadata: Metadata = {
 export default function PricingPage() {
   return (
     <>
-    <FixedHeader />
-    <div className="min-h-screen bg-[#ffffff]">
-      <main>
-        <PricingHero />
-        <PricingSection />
-        <PricingComparison />
-        <PricingFaq />
-        <PricingTestimonial />
-        <PricingCta />
-      </main>
-      <Footer />
-    </div>
+      <PricingHero />
+      <PricingSection />
+      <PricingComparison />
+      <PricingFaq />
+      <PricingTestimonial />
+      <PricingCta />
     </>
   )
 }

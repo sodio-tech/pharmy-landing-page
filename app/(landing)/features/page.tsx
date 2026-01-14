@@ -1,4 +1,3 @@
-import { Footer } from "@/components/landing/footer"
 import { FeaturesHero } from "@/components/landing/features/features-hero"
 import { FeaturesIntro } from "@/components/landing/features/features-intro"
 import { UserAccessFeature } from "@/components/landing/features/user-access-feature"
@@ -10,7 +9,6 @@ import { AiIntelligence } from "@/components/landing/features/ai-intelligence"
 import { WhyChoosePharmy } from "@/components/landing/features/why-choose-pharmy"
 import { FeaturesCta } from "@/components/landing/features/features-cta"
 import type { Metadata } from "next"
-import FixedHeader from "@/components/landing/FixedHeader"
 
 export const metadata: Metadata = {
   title: "Pharmy Features – Billing, Inventory, Reports & Staff Control",
@@ -42,22 +40,16 @@ export const metadata: Metadata = {
 export default function FeaturesPage() {
   return (
     <>
-      <FixedHeader />
-      <div className="min-h-screen bg-[#ffffff]">
-        <main>
-          <FeaturesHero />
-          <FeaturesIntro />
-          <UserAccessFeature />
-          {/* <InventoryFeature /> */}
-          {/* <PrescriptionFeature />
-                <SalesBillingFeature /> */}
-          <AiIntelligence />
-          {/* <CompleteFeatureSuite /> */}
-          <WhyChoosePharmy />
-          <FeaturesCta />
-        </main>
-        <Footer />
-      </div>
+      <FeaturesHero />
+      <FeaturesIntro />
+      <UserAccessFeature />
+      {/* <InventoryFeature /> */}
+      {/* <PrescriptionFeature />
+            <SalesBillingFeature /> */}
+      <AiIntelligence />
+      {/* <CompleteFeatureSuite /> */}
+      <WhyChoosePharmy />
+      <FeaturesCta />
     </>
   )
 }
