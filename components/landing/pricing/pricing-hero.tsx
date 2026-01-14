@@ -5,6 +5,10 @@ export function PricingHero() {
   return (
   <section className="relative min-h-[600px] flex items-center justify-center bg-linear-to-b from-[#4db8af] to-[#0d9488] px-4 py-20 overflow-hidden">
        <div className="container mx-auto max-w-5xl text-center relative pt-20 pb-10 z-10">
+        <div className="inline-flex items-center gap-2 bg-[#0f766e]/30 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-4">
+          <span className="bg-[#f59e0b] text-white text-xs font-semibold px-2.5 py-1 rounded-full">Best Value</span>
+          <span className="text-white/90 text-sm font-medium">Transparent Pricing 💰</span>
+        </div>
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight text-balance">
           Simple, Transparent <span className="text-[#ffffff]/85">Pricing for Every Pharmacy</span> 
         </h1>

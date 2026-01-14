@@ -45,8 +45,8 @@ export default function PricingPage() {
         <PricingHero />
         <PricingSection />
         <PricingComparison />
-        <PricingTestimonial />
         <PricingFaq />
+        <PricingTestimonial />
         <PricingCta />
       </main>
       <Footer />
