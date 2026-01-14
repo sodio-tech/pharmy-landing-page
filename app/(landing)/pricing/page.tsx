@@ -7,6 +7,7 @@ import { PricingTestimonial } from "@/components/landing/pricing/pricing-testimo
 import { PricingFaq } from "@/components/landing/pricing/pricing-faq"
 import { PricingCta } from "@/components/landing/pricing/pricing-cta"
 import type { Metadata } from "next"
+import FixedHeader from "@/components/landing/FixedHeader"
 
 export const metadata: Metadata = {
   title: "Pharmy Pricing – Pro Plan & Multi-Branch Add-On",
@@ -37,8 +38,9 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
   return (
+    <>
+    <FixedHeader />
     <div className="min-h-screen bg-[#ffffff]">
-      <Header />
       <main>
         <PricingHero />
         <PricingSection />
@@ -49,5 +51,6 @@ export default function PricingPage() {
       </main>
       <Footer />
     </div>
+    </>
   )
 }
