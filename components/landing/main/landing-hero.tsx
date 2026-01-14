@@ -1,4 +1,3 @@
-// import Image from "next/image"
 import { GetStartedFreeButton } from "../get-started-free-button"
 import { BookDemoButton } from "../book-demo-button"
 import { PharmacyDashboardPreview } from "./pharmacy-dashboard-preview"
