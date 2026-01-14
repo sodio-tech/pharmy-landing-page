@@ -85,13 +85,11 @@ export function AIFeatures() {
               whileHover={{ scale: 1.05, y: -5 }}
               className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
             >
-              <motion.div
+              <div
                 className={`${feature.bgColor} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4`}
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
               >
                 <feature.icon className="w-8 h-8 text-white" />
-              </motion.div>
+              </div>
               <h3 className="text-lg font-semibold text-[#111827] mb-2">{feature.title}</h3>
               <p className="text-[#4b5563] text-sm leading-relaxed">{feature.description}</p>
             </motion.div>

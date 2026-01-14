@@ -12,7 +12,7 @@ export function GetStartedFreeButton({
   href = "https://app.pharmy.one/signup"
 }: GetStartedFreeButtonProps) {
   return (
-    <Button className={cn("bg-[#0f766e] hover:bg-[#0f766e]/90 text-white px-6 py-6 text-base", className)}>
+    <Button className={cn("bg-[#0f766e] hover:bg-[#0f766e]/90 text-white px-6 py-6 text-base cursor-pointer", className)}>
       <Link href={href} target="_blank" rel="noopener noreferrer">Get Started Free</Link>
     </Button>
   )
