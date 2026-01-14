@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { Check, Users } from "lucide-react"
-import Link from "next/link"
+import { BookDemoModal } from "../book-demo-modal"
 
 export function AboutHero() {
   return (
@@ -66,13 +66,15 @@ export function AboutHero() {
               >
                 Get Started Free
               </motion.a>
-              <motion.button
-                className="bg-white text-[#111827] px-6 py-3 rounded-full font-semibold border-2 border-[#e5e7eb] transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                View Our Story
-              </motion.button>
+              <BookDemoModal>
+                <motion.button
+                  className="bg-white text-[#111827] px-6 py-3 cursor-pointer rounded-full font-semibold border-2 border-[#e5e7eb] transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Get In Touch
+                </motion.button>
+              </BookDemoModal>
             </motion.div>
           </motion.div>
 

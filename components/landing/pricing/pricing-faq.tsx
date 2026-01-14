@@ -1,3 +1,6 @@
+"use client"
+
+import { motion } from "framer-motion"
 import { ArrowUpCircle, Gift, Cloud, Lock, Building } from "lucide-react"
 
 export function PricingFaq() {
@@ -34,20 +37,56 @@ export function PricingFaq() {
     },
   ]
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0.4, 0, 0.2, 1] as const,
+      },
+    },
+  }
+
   return (
     <section className="py-20 px-4 bg-gray-50">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+        >
           <h2 className="text-4xl font-bold text-[#111827] mb-4">Frequently Asked Questions</h2>
           <p className="text-lg text-[#6b7280]">Everything you need to know about our pricing</p>
-        </div>
+        </motion.div>
 
-        <div className="space-y-6">
+        <motion.div
+          className="space-y-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {faqs.map((faq, index) => {
             const IconComponent = faq.icon
             return (
-              <div
+              <motion.div
                 key={index}
+                variants={itemVariants}
+                whileHover={{ scale: 1.02, y: -2 }}
                 className="bg-[#ffffff] border border-[#e5e7eb] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="flex gap-4">
@@ -61,10 +100,10 @@ export function PricingFaq() {
                     <p className="text-[#6b7280] leading-relaxed">{faq.answer}</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             )
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

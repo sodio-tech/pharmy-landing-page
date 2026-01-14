@@ -1,3 +1,6 @@
+"use client"
+
+import { motion } from "framer-motion"
 import { Check, Shield } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -65,18 +68,54 @@ const pricingPlans = [
   },
 ]
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.4, 0, 0.2, 1] as const,
+    },
+  },
+}
+
 export function PricingSection() {
   return (
     <section className="py-12 sm:py-16 lg:py-20 px-4 bg-[#f9fafb]">
       <div className="container mx-auto max-w-7xl">
-      <div className="text-center mb-16">
+      <motion.div
+        className="text-center mb-16"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.7 }}
+      >
            <h2 className="text-4xl font-bold text-[#111827] mb-4">Choose Your Plan</h2>
           <p className="text-lg text-[#4b5563]">Start free and upgrade as you grow</p>
-          </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto mb-8">
+          </motion.div>
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto mb-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {pricingPlans.map((plan) => (
-            <div
+            <motion.div
               key={plan.name}
+              variants={itemVariants}
+              whileHover={{ scale: 1.03, y: -5 }}
               className={`relative rounded-3xl p-8 ${plan.cardBg} ${plan.name === "Pro Plan" ? "shadow-2xl" : "shadow-lg"} transition-all`}
             >
               {plan.badge && (
@@ -126,19 +165,38 @@ export function PricingSection() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="text-center space-y-4 mt-16">
-          <p className="text-[#6b7280] text-base">
+        <motion.div
+          className="text-center space-y-4 mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <motion.p
+            className="text-[#6b7280] text-base"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             All plans include 14-day free trial • No credit card required • Cancel anytime
-          </p>
-          <div className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-md">
+          </motion.p>
+          <motion.div
+            className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-md"
+            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
             <Shield className="h-5 w-5 text-[#0f766e]" />
             <span className="text-[#111827] font-medium">Secure payment powered by Stripe</span>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   )
