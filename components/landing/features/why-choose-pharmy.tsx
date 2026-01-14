@@ -1,3 +1,30 @@
+"use client"
+
+import { motion } from "framer-motion"
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.4, 0, 0.2, 1] as const,
+    },
+  },
+}
+
 export function WhyChoosePharmy() {
   const features = [
     {
@@ -65,14 +92,31 @@ export function WhyChoosePharmy() {
   return (
     <section className="py-20 px-6 bg-[#ffffff]">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">Why Choose Pharmy?</h2>
           <p className="text-[#4b5563] text-lg max-w-2xl mx-auto">The smart choice for modern pharmacy management</p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {features.map((feature, index) => (
-            <div key={index} className="bg-[#f9fafb] rounded-lg p-6 text-center">
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="bg-[#f9fafb] rounded-lg p-6 text-center"
+            >
               <div
                 className="inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4"
                 style={{ backgroundColor: feature.iconBg }}
@@ -83,9 +127,9 @@ export function WhyChoosePharmy() {
               <h3 className="text-xl font-semibold text-[#111827] mb-3">{feature.title}</h3>
 
               <p className="text-[#4b5563] text-sm">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )
