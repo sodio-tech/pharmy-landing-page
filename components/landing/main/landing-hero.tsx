@@ -5,8 +5,11 @@ import { PharmacyDashboardPreview } from "./pharmacy-dashboard-preview"
 
 export function LandingHero() {
   return (
-    <section className="bg-linear-to-b from-[#0e928c] to-[#0d9488] py-16 md:py-24">
-      <div className="container mx-auto pt-16 px-4">
+    <section className="relative bg-linear-to-b from-[#0e928c] to-[#0d9488] py-16 md:py-24 overflow-hidden">
+      <div className="pointer-events-none absolute -top-10 -left-14 w-64 h-64 bg-white rounded-full opacity-30 blur-3xl" />
+      <div className="pointer-events-none absolute -top-10 -right-14 w-64 h-64 bg-white rounded-full opacity-20 blur-3xl" />
+      
+      <div className="container mx-auto pt-16 px-4 relative z-10">
         <div className="flex flex-col items-center text-center">
           <div className="inline-flex items-center gap-2 bg-[#0f766e]/30 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
             <span className="bg-[#f59e0b] text-white text-xs font-semibold px-2.5 py-1 rounded-full">New</span>
