@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export function OfficeInfo() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary/30">
+    <section className="py-16 md:py-24 bg-linear-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4 max-w-7xl">
         <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-16 text-balance">
           Visit Our Office
@@ -13,7 +13,7 @@ export function OfficeInfo() {
           {/* Contact Details */}
           <div className="space-y-8">
             <div className="group flex gap-6 p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300">
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/10 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-br from-primary/10 to-primary/5 border border-primary/10 shrink-0 group-hover:scale-110 transition-transform duration-300">
                 <MapPin className="h-6 w-6 text-primary" strokeWidth={1.5} />
               </div>
               <div className="flex-1">
@@ -23,7 +23,7 @@ export function OfficeInfo() {
             </div>
 
             <div className="group flex gap-6 p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300">
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/10 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-br from-primary/10 to-primary/5 border border-primary/10 shrink-0 group-hover:scale-110 transition-transform duration-300">
                 <Phone className="h-6 w-6 text-primary" strokeWidth={1.5} />
               </div>
               <div className="flex-1">
@@ -33,7 +33,7 @@ export function OfficeInfo() {
             </div>
 
             <div className="group flex gap-6 p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300">
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/10 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-br from-primary/10 to-primary/5 border border-primary/10 shrink-0 group-hover:scale-110 transition-transform duration-300">
                 <Clock className="h-6 w-6 text-primary" strokeWidth={1.5} />
               </div>
               <div className="flex-1">
@@ -46,7 +46,7 @@ export function OfficeInfo() {
 
           {/* Map Image */}
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
             <div className="relative bg-card rounded-3xl overflow-hidden border border-border/50 shadow-2xl h-[400px] lg:h-[500px] group-hover:shadow-primary/10 transition-all duration-500">
               <Image
                 src="/assets/office.png"
