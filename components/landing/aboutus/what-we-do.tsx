@@ -1,4 +1,29 @@
+"use client"
+
+import { motion } from "framer-motion"
 import { BarChart3, FileText, Receipt, Truck, BarChart, Building2 } from "lucide-react"
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.4, 0, 0.2, 1] as const,
+    },
+  },
+}
 
 export function WhatWeDo() {
   const features = [
@@ -62,12 +87,24 @@ export function WhatWeDo() {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <div className="inline-block mb-4">
+        <motion.div
+          className="text-center mb-16 max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+        >
+          <motion.div
+            className="inline-block mb-4"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <span className="text-xs font-semibold text-[#0f766e] bg-[#f0fdfa] px-4 py-2 rounded-full uppercase tracking-wide">
               What We Do
             </span>
-          </div>
+          </motion.div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#111827] mb-6">
             An All-In-One Platform for Modern Pharmacies
           </h2>
@@ -75,27 +112,35 @@ export function WhatWeDo() {
             Pharmy brings together every tool you need to run a successful pharmacy business, from the back office to
             the front counter.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {features.map((feature, index) => {
             const Icon = feature.icon
             const colorClasses = getColorClasses(feature.color)
 
             return (
-              <div
+              <motion.div
                 key={index}
-                className="bg-[#f9fafb] rounded-xl p-6 hover:shadow-lg transition-all hover:-translate-y-1 border border-[#f3f4f6]"
+                variants={itemVariants}
+                whileHover={{ scale: 1.02, y: -5 }}
+                className="bg-[#f9fafb] rounded-xl p-6 hover:shadow-lg transition-all border border-[#f3f4f6] h-full"
               >
                 <div className={`w-12 h-12 rounded-lg ${colorClasses.bg} flex items-center justify-center mb-5`}>
                   <Icon className={`w-6 h-6 ${colorClasses.icon}`} />
                 </div>
                 <h3 className="text-xl font-bold text-[#111827] mb-3">{feature.title}</h3>
                 <p className="text-[#6b7280] leading-relaxed">{feature.description}</p>
-              </div>
+              </motion.div>
             )
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   )
