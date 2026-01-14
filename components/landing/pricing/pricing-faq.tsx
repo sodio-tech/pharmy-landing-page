@@ -51,7 +51,7 @@ export function PricingFaq() {
                 className="bg-[#ffffff] border border-[#e5e7eb] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <div className="w-12 h-12 rounded-xl bg-[#e0f2f1] flex items-center justify-center">
                       <IconComponent className="w-6 h-6 text-[#0f766e]" />
                     </div>
