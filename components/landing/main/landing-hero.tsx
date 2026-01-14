@@ -91,6 +91,7 @@ export function LandingHero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+            whileHover={{ scale: 1.02, transition: { duration: 0.15, ease: "easeOut" } }}
           >
             <PharmacyDashboardPreview />
           </motion.div>
