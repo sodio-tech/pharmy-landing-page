@@ -87,7 +87,7 @@ export function LandingHero() {
           </motion.div>
 
           <motion.div
-            className="w-full lg:max-w-[1400px]"
+            className="hidden md:block w-full lg:max-w-[1400px]"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
