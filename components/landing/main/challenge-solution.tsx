@@ -93,30 +93,30 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.15,
     },
   },
 }
 
 const itemVariants = {
-  hidden: { opacity: 0, x: -30 },
+  hidden: { opacity: 0, x: -20 },
   visible: {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.4,
       ease: [0.4, 0, 0.2, 1] as const,
     },
   },
 }
 
 const solutionVariants = {
-  hidden: { opacity: 0, x: 30 },
+  hidden: { opacity: 0, x: 20 },
   visible: {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.4,
       ease: [0.4, 0, 0.2, 1] as const,
     },
   },
@@ -124,15 +124,15 @@ const solutionVariants = {
 
 export function ComparisonSection() {
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="bg-white py-20 md:py-28 overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5 }}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#111827] mb-6 text-balance">
             From Chaos to <span className="text-[#0f766e]">Control</span>
@@ -147,10 +147,10 @@ export function ComparisonSection() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 mb-16">
           {/* Challenges */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.7 }}
+            viewport={{ once: true, margin: "-20px" }}
+            transition={{ duration: 0.5 }}
           >
             <motion.div
               className="flex items-center gap-3 mb-8"
@@ -169,14 +169,14 @@ export function ComparisonSection() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, margin: "-20px" }}
             >
               {challenges.map((challenge, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
                   whileHover={{ scale: 1.02, x: 5 }}
-                  className="bg-white rounded-2xl p-6 border border-[#fee2e2] hover:border-[#fca5a5] transition-colors"
+                  className="bg-white rounded-2xl p-6 border border-[#fee2e2] hover:border-[#fca5a5] transition-colors touch-manipulation"
                 >
                   <div className="flex items-start gap-4 mb-4">
                     <div
@@ -201,10 +201,10 @@ export function ComparisonSection() {
           {/* Solutions */}
           <motion.div
             className="relative"
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.7 }}
+            viewport={{ once: true, margin: "-20px" }}
+            transition={{ duration: 0.5 }}
           >
             <motion.div
               className="flex items-center gap-3 mb-8"
@@ -223,17 +223,17 @@ export function ComparisonSection() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, margin: "-20px" }}
             >
               {solutions.map((solution, index) => (
                 <motion.div
                   key={index}
                   variants={solutionVariants}
                   whileHover={{ scale: 1.02, x: -5 }}
-                  className="bg-white rounded-2xl p-6 border border-[#ccf0ed] hover:border-[#0f766e]/40 transition-colors relative group"
+                  className="bg-white rounded-2xl p-6 border border-[#ccf0ed] hover:border-[#0f766e]/40 transition-colors relative group touch-manipulation"
                 >
                   {index === 1 && (
-                    <div className="absolute -left-13 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center z-10">
+                    <div className="absolute -left-12 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center z-10 pointer-events-none">
                       <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center shadow-2xl">
                         <ArrowRight className="w-7 h-7 text-[#0f766e]" />
                       </div>
@@ -262,33 +262,33 @@ export function ComparisonSection() {
 
         {/* Stats */}
         <motion.div
-          className="relative mt-12"
-          initial={{ opacity: 0, y: 50 }}
+          className="relative mt-12 overflow-hidden"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-20px" }}
+          transition={{ duration: 0.5 }}
         >
           <div className="absolute inset-0 border-[#0f766e]/20 rounded-full"></div>
           <motion.div
-            className="relative rounded-[38px] shadow-2xl p-12 md:p-16"
-            initial={{ scale: 0.95 }}
+            className="relative md:rounded-[38px] shadow-2xl p-8 md:p-16"
+            initial={{ scale: 0.98 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
           >
             <motion.div
               className="grid md:grid-cols-3 gap-8 md:gap-12"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, margin: "-20px" }}
             >
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  whileHover={{ scale: 1.1 }}
-                  className="text-center"
+                  whileHover={{ scale: 1.05 }}
+                  className="text-center touch-manipulation"
                 >
                   <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#0f766e] mb-3">{stat.value}</div>
                   <div className="text-[#4b5563] font-medium text-base md:text-lg">{stat.label}</div>
