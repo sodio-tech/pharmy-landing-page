@@ -270,7 +270,7 @@ export function ComparisonSection() {
         >
           <div className="absolute inset-0 border-[#0f766e]/20 rounded-full"></div>
           <motion.div
-            className="relative md:rounded-[38px] shadow-2xl p-8 md:p-16"
+            className="relative shadow-2xl p-8 md:p-16"
             initial={{ scale: 0.98 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
